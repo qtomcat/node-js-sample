@@ -7,6 +7,7 @@ app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
   response.send('Hello Worldw2')
+  buffer.toString('utf-8')
 })
 
 app.listen(app.get('port'), function() {
