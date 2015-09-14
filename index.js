@@ -7,8 +7,8 @@ app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
   
-  response.sendfile('index.html');
-  fs.readFile('index.html', 'utf8', function(err, data) {
+  response.sendfile('bitstarter.html');
+  fs.readFile('bitstarter.html', 'utf8', function(err, data) {
      if (err) {
          return console.log(err);
      }
