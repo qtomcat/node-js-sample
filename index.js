@@ -1,13 +1,19 @@
 var express = require('express')
 var app = express()
 var buffer = new Buffer(16);
+var fs = require ('fs');
 
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
   response.send('Hello Worldw2')
-  buffer.toString('utf-8')
+  fs.readFile('index.html', 'utf8', function(err, data) {
+     if (err) {
+         return console.log(err);
+     }
+     console.log(data);
+     });
 })
 
 app.listen(app.get('port'), function() {
