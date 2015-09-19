@@ -6,8 +6,8 @@ app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 app.get('/', function(request, response) {
   
-  response.sendfile('bitstarter-hw4.html');
-  fs.readFile('bitstarter-hw4.html', 'utf8', function(err, data) {
+  response.sendfile('bitstarter.html');
+  fs.readFile('bitstarter.html', 'utf8', function(err, data) {
      if (err) {
          return console.log(err);
      }
